@@ -12,7 +12,7 @@
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
+    <link href="./../css/styles.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -53,19 +53,29 @@
             <div class="row gx-4 gx-lg-5 align-items-center">
                 <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="https://dummyimage.com/600x700/dee2e6/6c757d.jpg" alt="..." /></div>
                 <div class="col-md-6">
-                    <div class="small mb-1">SKU: BST-498</div>
+                    <div class="small mb-1">SKU: 00-1</div>
                     <h1 class="display-5 fw-bolder">Shop item template</h1>
                     <div class="fs-5 mb-5">
-                        <span class="text-decoration-line-through">$45.00</span>
-                        <span>$40.00</span>
+                        <span class="text-decoration-line-through">45.00€</span>
+                        <span>40.00€</span>
                     </div>
                     <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium at dolorem quidem modi. Nam sequi consequatur obcaecati excepturi alias magni, accusamus eius blanditiis delectus ipsam minima ea iste laborum vero?</p>
                     <div class="d-flex">
                         <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
-                        <button class="btn btn-outline-dark flex-shrink-0" type="button">
-                                <i class="bi-cart-fill me-1"></i>
-                                Add to cart
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                              Modèle
                             </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="#">1</a></li>
+                                <li><a class="dropdown-item" href="#">2</a></li>
+                                <li><a class="dropdown-item" href="#">3</a></li>
+                            </ul>
+                            <button onclick="addToCart({ id: 1, name: 'Plante1', price: 40 })" class="btn btn-outline-dark flex-shrink-0" type="button">
+                                    <i class="bi-cart-fill me-1"></i>
+                                    Add to cart
+                                </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -86,7 +96,7 @@
                                 <!-- Product name-->
                                 <h5 class="fw-bolder">Fancy Product</h5>
                                 <!-- Product price-->
-                                $40.00 - $80.00
+                                40.00€ - 80.00€
                             </div>
                         </div>
                         <!-- Product actions-->
@@ -115,7 +125,7 @@
                                     <div class="bi-star-fill"></div>
                                 </div>
                                 <!-- Product price-->
-                                <span class="text-muted text-decoration-line-through">$20.00</span> $18.00
+                                <span class="text-muted text-decoration-line-through">20.00€</span> 18.00€
                             </div>
                         </div>
                         <!-- Product actions-->
@@ -136,7 +146,7 @@
                                 <!-- Product name-->
                                 <h5 class="fw-bolder">Sale Item</h5>
                                 <!-- Product price-->
-                                <span class="text-muted text-decoration-line-through">$50.00</span> $25.00
+                                <span class="text-muted text-decoration-line-through">50.00€</span> 25.00€
                             </div>
                         </div>
                         <!-- Product actions-->
@@ -163,7 +173,7 @@
                                     <div class="bi-star-fill"></div>
                                 </div>
                                 <!-- Product price-->
-                                $40.00
+                                40.00€
                             </div>
                         </div>
                         <!-- Product actions-->
@@ -178,7 +188,7 @@
     <!-- Footer-->
     <footer class="py-5 bg-dark">
         <div class="container">
-            <p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p>
+            <p class="m-0 text-center text-white">Copyright &copy; ShopTaPlante 2022</p>
         </div>
     </footer>
     <!-- Bootstrap core JS-->

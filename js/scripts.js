@@ -18,11 +18,7 @@ function addToCart(item) {
 }
 
 // Ce script utilise le stockage local pour enregistrer les articles du panier. Chaque fois qu'un article est ajouté au panier, il est ajouté à un tableau qui est ensuite enregistré dans le stockage local. Si le panier n'existe pas encore, il est créé avant d'ajouter l'article.
-// Pour utiliser ce script, il suffit d'appeler la fonction addToCart() en lui passant l'article à ajouter au panier en tant qu'argument. Par exemple :
-
-addToCart({ id: 1, name: 'Plante1', price: 10 });
-
-// Cela ajoutera un article avec l'ID 1, le nom "Plante1" et le prix 10 € au panier.
+// Pour utiliser ce script, il suffit d'appeler la fonction addToCart() en lui passant l'article à ajouter au panier en tant qu'argument.
 
 // Pour afficher la panier :
 
@@ -62,7 +58,7 @@ function removeFromCart(itemId) {
     }
 }
 
-// Ce script vérifie si le panier existe dans le stockage local. Si le panier n'existe pas, il retourne un message d'erreur indiquant que le panier est vide. Si le panier existe, il récupère les articles enregistrés dans le stockage local et cherche l'article à supprimer en fonction de son ID. Si l'article est trouvé, il est supprimé du panier et le panier modifié est enregistré dans le stockage local. Si l'article n'est pas trouvé, un message d'erreur est retourné.
+// Ce script récupère les articles enregistrés dans le stockage local et cherche l'article à supprimer en fonction de son ID. Si l'article est trouvé, il est supprimé du panier et le panier modifié est enregistré dans le stockage local. Si l'article n'est pas trouvé, un message d'erreur est retourné.
 // Pour utiliser ce script, il suffit d'appeler la fonction removeFromCart() en lui passant l'ID de l'article à supprimer du panier en tant qu'argument. Par exemple :
 
 var result = removeFromCart(1);
